@@ -1,38 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# README
 
-## Getting Started
+Este é um projeto que utiliza o Docker Compose e Node para criar um ambiente de desenvolvimento. Siga as etapas abaixo para configurar e executar o projeto localmente.
 
-First, run the development server:
+## Pré-requisitos
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- Docker: [Instalação do Docker](https://docs.docker.com/get-docker/)
+
+- Node Versão 18.16.1 ou superior [Instalação do Node](https://nodejs.org/en)
+
+## Configuração e execução
+
+1. Clone o repositório para o seu ambiente local:
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+git clone <URL_DO_REPOSITORIO>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+2. Navegue até o diretório do projeto:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+cd <DIRETORIO_DO_PROJETO>
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+3. Inicie os contêineres Docker usando o Docker Compose:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+docker-compose up -d
 
-## Deploy on Vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Aguarde até que os contêineres sejam iniciados e executados.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. Abra o navegador e acesse a URL [http://0.0.0.0:16686/](http://0.0.0.0:16686/) para acessar o Jaeger, uma ferramenta de rastreamento e observabilidade.
+
+6. Instale as dependências locais do Node.js executando o seguinte comando:
+
+```
+yarn install
+```
+
+7. Iniciar o servidor com o Storybook
+
+```
+yarn storybook
+```
+
+8. Iniciar o servidor local
+
+```
+yarn dev
+```
+
+## Encerrando a execução
+
+Para encerrar a execução do projeto, você pode executar o seguinte comando na raiz do projeto:
+
+```
+
+docker-compose down
+
+```
+
+Isso encerrará os contêineres Docker e liberará os recursos utilizados.
+
+## Observações
+
+Certifique-se de ter o Docker instalado corretamente no seu ambiente antes de executar o projeto.
+
+Certifique-se de que as portas especificadas no arquivo `docker-compose.yml` não estejam sendo utilizadas por outros processos em seu sistema.
