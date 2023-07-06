@@ -1,9 +1,0 @@
-name: Build and deploy - Front-end Telemetry 
-
-on:
-  push:
-    branches:
-      - dev
-    paths:
-      - ./**
-  workflow_dispatch:
