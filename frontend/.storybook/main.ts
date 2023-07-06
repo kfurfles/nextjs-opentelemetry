@@ -20,7 +20,6 @@ const config: StorybookConfig = {
     autodocs: 'tag',
   },
   webpackFinal: async (config: any, ) => {
-    console.log({ config })
     config.resolve.alias = {
       ...config.resolve.alias,
       "@": path.resolve(__dirname, "../src/")
@@ -33,7 +32,3 @@ const config: StorybookConfig = {
   }
 }
 export default config
-
-// "@/*": ["./src/*"],
-//       "@client*": ["./src/client/*"],
-//       "@api*": ["./src/client/*"]
