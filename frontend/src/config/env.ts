@@ -1,0 +1,10 @@
+export const FIREBASE_API_KEY= process.env.NEXT_PUBLIC_API_KEY
+export const FIREBASE_AUTH_DOMAIN= process.env.NEXT_PUBLIC_AUTH_DOMAIN
+export const FIREBASE_PROJECT_ID= process.env.NEXT_PUBLIC_PROJECT_ID
+export const FIREBASE_STORAGE_BUCKET= process.env.NEXT_PUBLIC_STORAGE_BUCKET
+export const FIREBASE_MSM_SENDER_ID= process.env.NEXT_PUBLIC_MSM_SENDER_ID
+export const FIREBASE_MSM_APP_ID= process.env.NEXT_PUBLIC_MSM_APP_ID
+export const TRACING_OTEL_URL= process.env.NEXT_PUBLIC_TRACING_OTEL
+export const LOCAL_TRACING= process.env.NEXT_PUBLIC_LOCAL_TRACING
+export const TRACING_DOCUMENT= process.env?.NEXT_PUBLIC_LOCAL_TRACING_DOCUMENT === "1"
+export const MONGODB_URI= process.env.MONGODB_URI ?? ''
