@@ -16,14 +16,16 @@ jobs:
         working-directory: './frontend'
 
     steps:
-      - uses: actions/checkout@v3
-
+      
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-            node-version: 18
-
-      - name: yarn install dependencies and build
+          node-version: 18.16.1
+        
+      - name: Install Yarn
+        run: npm install -g yarn
+        
+      - name: yarn install, build
         run: |
           yarn
           yarn build
