@@ -14,7 +14,7 @@ Este é um projeto que utiliza o Docker Compose e Node para criar um ambiente de
 
 ```
 
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/kfurfles/nextjs-opentelemetry
 
 ```
 
