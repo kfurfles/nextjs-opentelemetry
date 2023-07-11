@@ -46,16 +46,16 @@ export function initOpenTelemetry() {
     instrumentations: [
       getWebAutoInstrumentations({
         "@opentelemetry/instrumentation-document-load": {
-          enabled: false
+          enabled: true
         },
         "@opentelemetry/instrumentation-xml-http-request": {
           clearTimingResources: true,
         },
         "@opentelemetry/instrumentation-user-interaction": {
-          enabled: false
+          enabled: true
         },
         "@opentelemetry/instrumentation-fetch": {
-          enabled: false
+          enabled: true
         }
       }),
     ],
